@@ -1,0 +1,10 @@
+{
+	"name": "My Mod",
+	"shortname": "mymod",
+	"game": "doom",
+	"playpal": "AAP-64",
+	"sourceport": {
+			"dir": "port\\gzdoom",
+			"exe": "gzdoom.exe"
+	}
+}

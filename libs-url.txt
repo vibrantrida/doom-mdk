@@ -1,0 +1,4 @@
+https://raw.githubusercontent.com/rheit/acc/master/zcommon.acs
+https://raw.githubusercontent.com/rheit/acc/master/zdefs.acs
+https://raw.githubusercontent.com/rheit/acc/master/zspecial.acs
+https://raw.githubusercontent.com/rheit/acc/master/zwvars.acs
