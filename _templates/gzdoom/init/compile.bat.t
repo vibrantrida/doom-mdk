@@ -106,6 +106,11 @@ if not exist <%= shortname %>-assets.bat hygen gzdoom asset
 call <%= shortname %>-assets.bat
 
 echo Successfully offset sprites!
+goto generateZScript
+
+:generateZScript
+echo Generating root ZScript lump...
+hygen gzdoom script
 goto compileEnd
 
 :compileEnd
