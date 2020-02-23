@@ -1,9 +1,12 @@
 {
-	"name": "My Mod",
-	"shortname": "mymod",
-	"game": "doom",
-	"sourceport": {
-		"dir": "port\\gzdoom",
-		"exe": "gzdoom.exe"
-	}
+  "name": "My Mod",
+  "shortname": "mymod",
+  "game": "doom",
+  "zscript": {
+    "version": 4.3
+  },
+  "sourceport": {
+    "dir": "port\\gzdoom",
+    "exe": "gzdoom.exe"
+  }
 }
