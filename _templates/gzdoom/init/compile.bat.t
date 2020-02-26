@@ -52,7 +52,7 @@ exit
 cd ..
 if not exist maps\ (
 	echo Directory "maps\" doesn't exist, skipping...
-	goto compileEnd
+	goto generateZScript
 )
 
 cd maps\
@@ -70,7 +70,7 @@ if exist *.acs (
 	goto mapScriptSuccess
 )
 echo No Map scripts found, skipping...
-goto compileEnd
+goto generateZScript
 
 :mapScriptSuccess
 
@@ -93,25 +93,11 @@ if exist *.bak del /q /f *.bak
 if exist *.backup* del /q /f *.backup*
 if exist *.o del /q /f *.o
 
-:offsetSprites
-
-cd ..\..
-
-echo Offsetting sprites...
-if exist <%= shortname %>-assets.bat (
-	del /q /f <%= shortname %>-assets.bat
-	hygen gzdoom asset
-)
-if not exist <%= shortname %>-assets.bat hygen gzdoom asset
-call <%= shortname %>-assets.bat
-
-echo Successfully offset sprites!
-goto generateZScript
-
 :generateZScript
+
+cd ../
 echo Generating root ZScript lump...
 hygen gzdoom script
-goto compileEnd
 
 :compileEnd
 
